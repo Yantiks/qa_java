@@ -20,13 +20,13 @@ public class CatTest {
     @Test
     public void getSoundTest() {
         Feline feline = new Feline();
-        cat = new Cat (feline);
-        assertEquals("Мяу",cat.getSound());
+        cat = new Cat(feline);
+        assertEquals("Мяу", cat.getSound());
     }
 
     @Test
     public void getFoodVerifyTest() throws Exception {
-        cat = new Cat (felineMock);
+        cat = new Cat(felineMock);
         cat.getFood();
         Mockito.verify(felineMock, Mockito.times(1)).eatMeat();
     }
@@ -35,6 +35,6 @@ public class CatTest {
     public void getFoodAssertTest() throws Exception {
         Feline feline = new Feline();
         cat = new Cat(feline);
-        assertEquals(List.of("Животные", "Птицы", "Рыба"),cat.getFood());
+        assertEquals(List.of("Животные", "Птицы", "Рыба"), cat.getFood());
     }
 }
